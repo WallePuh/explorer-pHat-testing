@@ -11,7 +11,7 @@ def hello_world():
     return 'Hello to the World!'
 
 def start_blink():
-    blinker++
+    blinker+= 1
     threading.Timer(1, blink).start()
 
 def blink():
@@ -23,7 +23,7 @@ def stop_blink():
     print "stop_blink" + blinker
     if blinker == 1:
         explorerhat.output[0].stop()
-    blinker--
+    blinker-= 1
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
